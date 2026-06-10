@@ -1,75 +1,71 @@
-# React + TypeScript + Vite
+# Botánica — Atelier Floral
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page premium para una floristería de alto nivel. Diseño romántico oscuro con estética editorial, tipografía serif dramática y animaciones sutiles al scroll.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **TypeScript 6**
+- **Vite 8** (build tool)
+- **Tailwind CSS v4** (estilado utility-first)
+- **Motion** (animaciones)
+- **Phosphor Icons** (iconografía)
 
-## React Compiler
+## Instalación
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Desarrollo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm run dev
 ```
+
+Abre [http://localhost:5173](http://localhost:5173).
+
+## Build
+
+```bash
+pnpm run build
+```
+
+El output se genera en `dist/`. Las imágenes estáticas se sirven desde `public/`.
+
+## Estructura
+
+```
+src/
+├── components/
+│   ├── Nav.tsx             # Navegación flotante tipo isla de cristal
+│   ├── Hero.tsx            # Split screen con iluminación dramática
+│   ├── Philosophy.tsx      # Valores y esencia de la marca
+│   ├── Collections.tsx     # Bento grid asimétrico de colecciones
+│   ├── Moments.tsx         # Sticky stack horizontal de ocasiones
+│   ├── Testimonials.tsx    # Marquee infinito de citas
+│   ├── Contact.tsx         # Formulario + información de contacto
+│   ├── Footer.tsx          # Pie de página con redes sociales
+│   └── GrainOverlay.tsx    # Textura de grano analógico fija
+├── App.tsx
+├── index.css               # Tailwind v4 + theme personalizado
+└── main.tsx
+```
+
+## Paleta
+
+| Token | Color |
+|---|---|
+| `--color-dark` | `#0a0a0a` |
+| `--color-gold` | `#c4956a` |
+| `--color-burgundy` | `#4a1a2a` |
+| `--color-cream` | `#f5f0eb` |
+
+## Imágenes
+
+Las imágenes se encuentran en `public/` y se referencian con ruta absoluta (`/hero-dramatic.jpg`).
+
+| Archivo | Sección |
+|---|---|
+| `hero-dramatic.jpg` | Hero |
+| `collection-*.jpg` | Colecciones (×5) |
+| `moment-*.jpg` | Momentos (×4) |
