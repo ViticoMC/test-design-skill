@@ -4,25 +4,25 @@ const moments = [
   {
     title: "Bodas",
     desc: "Arreglos nupciales que capturan la esencia de cada historia de amor. Del ramo de la novia a la decoración del altar, cada detalle importa.",
-    img: "/moment-boda.jpg",
+    img: "moment-boda.jpg",
     gradient: "from-burgundy/40 via-dark/80 to-dark",
   },
   {
     title: "Funerales",
     desc: "Homenajes florales que honran la memoria con la dignidad y belleza que cada despedida merece.",
-    img: "/moment-funeral.jpg",
+    img: "moment-funeral.jpg",
     gradient: "from-elevated/20 via-dark/80 to-dark",
   },
   {
     title: "Celebraciones",
     desc: "Cumpleaños, aniversarios y eventos corporativos. Flores que transforman cualquier espacio en una celebración inolvidable.",
-    img: "/moment-celebracion.jpg",
+    img: "moment-celebracion.jpg",
     gradient: "from-gold/20 via-dark/80 to-dark",
   },
   {
     title: "Sorpresa",
     desc: "Ramos espontáneos para alegrar el día de alguien especial. Porque a veces las mejores flores son las que no esperabas.",
-    img: "/moment-sorpresa.jpg",
+    img: "moment-sorpresa.jpg",
     gradient: "from-cream/10 via-dark/80 to-dark",
   },
 ]
@@ -55,7 +55,7 @@ export function Moments() {
         >
           <div className="absolute inset-0">
             <img
-              src={m.img}
+              src={`${import.meta.env.BASE_URL}${m.img}`}
               alt={m.title}
               className="w-full h-full object-cover"
             />

@@ -66,7 +66,7 @@ export function Hero() {
         <div className="flex-1 relative min-h-[50dvh] md:min-h-full order-1 md:order-2 overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-l from-dark via-dark/50 to-transparent z-10" />
           <img
-            src="/hero-dramatic.jpg"
+            src={`${import.meta.env.BASE_URL}hero-dramatic.jpg`}
             alt="Arreglo floral dramático"
             className="w-full h-full object-cover"
             loading="eager"

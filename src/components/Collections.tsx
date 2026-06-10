@@ -5,31 +5,31 @@ const collections = [
   {
     name: "Silencio",
     desc: "Monocromático en blancos y verdes pálidos. Para momentos que no necesitan palabras.",
-    img: "/collection-silencio.jpg",
+    img: "collection-silencio.jpg",
     span: "md:col-span-2 md:row-span-2",
   },
   {
     name: "Atardecer",
     desc: "Tonos cálidos que capturan la luz del ocaso. Naranjas, rosas y dorados.",
-    img: "/collection-atardecer.jpg",
+    img: "collection-atardecer.jpg",
     span: "md:col-span-1 md:row-span-1",
   },
   {
     name: "Profundo",
     desc: "Flores oscuras y dramáticas. Burdeos, berenjena y negro vegetal.",
-    img: "/collection-profundo.jpg",
+    img: "collection-profundo.jpg",
     span: "md:col-span-1 md:row-span-1",
   },
   {
     name: "Silvestre",
     desc: "La belleza de lo indómito. Flores de campo en composiciones libres.",
-    img: "/collection-silvestre.jpg",
+    img: "collection-silvestre.jpg",
     span: "md:col-span-1 md:row-span-1",
   },
   {
     name: "Clásico",
     desc: "Rosas, eucalipto y lavanda. Lo esencial nunca pasa de moda.",
-    img: "/collection-clasico.jpg",
+    img: "collection-clasico.jpg",
     span: "md:col-span-1 md:row-span-1",
   },
 ]
@@ -67,7 +67,7 @@ export function Collections() {
             >
               <div className="relative rounded-[calc(1.5rem-0.375rem)] overflow-hidden h-full bg-elevated">
                 <img
-                  src={c.img}
+                  src={`${import.meta.env.BASE_URL}${c.img}`}
                   alt={c.name}
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                 />
